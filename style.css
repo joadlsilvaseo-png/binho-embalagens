@@ -1629,6 +1629,105 @@ a:focus-visible {
   }
 }
 
+/* LOGO E TEXTO LADO A LADO NO RODAPÉ */
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-brand img {
+  width: 150px;
+  max-height: 75px;
+  margin-bottom: 0;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.footer-brand p {
+  max-width: 220px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--texto-secundario);
+}
+
+/* AJUSTE MOBILE */
+
+@media (max-width: 480px) {
+  .footer-brand {
+    gap: 12px;
+  }
+
+  .footer-brand img {
+    width: 125px;
+  }
+
+  .footer-brand p {
+    font-size: 12px;
+  }
+}
+
+/* IDENTIDADE DA MARCA NO CABEÇALHO MOBILE */
+
+.logo-text {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .logo img {
+    width: 52px;
+    max-height: 56px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .logo-text strong {
+    color: #07378c;
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: -0.7px;
+  }
+
+  .logo-text small {
+    margin-top: 4px;
+    color: #07378c;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo img {
+    width: 43px;
+  }
+
+  .logo-text strong {
+    font-size: 18px;
+  }
+
+  .logo-text small {
+    font-size: 9px;
+  }
+}
+
 /* =========================
    FIM DO CSS
 ========================= */
